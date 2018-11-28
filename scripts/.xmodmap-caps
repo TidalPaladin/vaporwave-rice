@@ -1,0 +1,7 @@
+! file: .xmodmap-caps
+!
+! Maps the escape key to caps lock. Escape key
+! is not altered.
+! Call using xmodmap
+clear lock
+keycode 66 = Escape

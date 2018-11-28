@@ -1,0 +1,12 @@
+#!/bin/bash
+
+case $BLOCK_BUTTON in
+	1) $TERMINAL -e pulsemixer & disown ;;
+	3) pulsemixer --toggle-mute ;;
+	4) pulsemixer --change-volume +5 ;;
+	5) pulsemixer --change-volume -5 ;;
+esac
+
+printpastatus() { [[ $(pulsemixer --get-mute) = 1 ]] && echo -n 🔇 "   " && exit
+echo 🔊 $(pulsemixer --get-volume | sed -e "s/\s[0-9][0-9]*//g")% ;}
+printpastatus

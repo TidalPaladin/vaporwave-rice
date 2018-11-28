@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Change these if needed
+user='tidal'
+home="/home/$user"
+export TERMINAL='/usr/bin/alacritty'
+win_name="scratchpad_dropdown_ipython"
+
+# These should be ok
+export XAUTHORITY="$home/.Xauthority"
+export DISPLAY=':0'
+export HOME="$home"
+term_conf="$home/.config/alacritty/alacritty.yml"
+
+while true
+do
+	exec chpst -u tidal $TERMINAL --working-directory $HOME --config-file $term_conf --title $win_name -e ipython3 2>&1
+	sleep 1
+done

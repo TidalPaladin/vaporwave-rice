@@ -1,0 +1,110 @@
+{
+    "terminal.external.linuxExec": "urxvt",
+    "terminal.integrated.fontFamily": "Source Code Pro Medium",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.historyExplorer.enabled": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.lineNumbers": "relative",
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005f5f",
+        "statusBar.noFolderBackground": "#005f5f",
+        "statusBar.debuggingBackground": "#005f5f",
+        "[One Dark Pro Vivid]": {
+            "panel.background": "#000000",
+            "sideBar.background": "#000000",
+            "editor.background": "#000000",
+            "activityBar.background": "#080808",
+            "scrollbarSlider.background": "#111111",
+            "editorGutter.background": "#080808",
+            "editorLineNumber.activeForeground": "#ff00f2",
+            "editor.lineHighlightBackground": "#50505034",
+            "editorPane.background": "#000000",
+            "editor.selectionHighlightBackground": "#ff00007c",
+            "editor.selectionHighlightBorder": "#00000000",
+            "editorCursor.foreground": "#00b1a2",
+            "editorCursor.background": "#000000",
+            "editorGroupHeader.tabsBackground": "#101010",
+            "editorCodeLens.foreground": "#ff0000"
+        }
+    },
+    "editor.formatOnSave": true,
+    "C_Cpp.clang_format_fallbackStyle": "Google",
+    "git.enableSmartCommit": true,
+    "terminal.explorerKind": "integrated",
+    "explorer.confirmDragAndDrop": false,
+    "window.zoomLevel": -1,
+    "git.autofetch": true,
+    "workbench.iconTheme": "eq-material-theme-icons",
+    "workbench.colorTheme": "One Dark Pro Vivid",
+    "jupyter.appendResults": false,
+    "python.unitTest.unittestEnabled": true,
+    "python.unitTest.unittestArgs": [
+        "-v",
+        "-s",
+        ".",
+        "-t",
+        "${workspaceFolder}",
+        "-p",
+        "*test*.py"
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latexindent.args": [
+        "-c",
+        "%DIR%/",
+        "%TMPFILE%"
+    ],
+    "ai.homepage.openOnStartup": false,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "vim.enableNeovim": true,
+    "vim.statusBarColorControl": true,
+    "python.autoComplete.addBrackets": true,
+    "python.autoComplete.preloadModules": [
+        "numpy",
+        "pandas",
+        "matplotlib",
+        "scipy",
+        "sqlalchemy"
+    ],
+    "latex-workshop.latex.clean.enabled": true,
+    "latex-workshop.message.update.show": false,
+    "debug.toolBarLocation": "docked",
+    "debug.internalConsoleOptions": "openOnSessionStart",
+    "python.pythonPath": "python3",
+    "python.terminal.executeInFileDir": true,
+    "editor.wrappingIndent": "indent",
+    "editor.hover.delay": 100,
+    "gitlens.codeLens.enabled": false,
+    "zenMode.hideStatusBar": false,
+    "zenMode.hideActivityBar": false,
+    "explorer.confirmDelete": false
+}

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Change these if needed
+user='tidal'
+home="/home/$user"
+export TERMINAL='/usr/bin/alacritty'
+win_name="scratchpad_dropdown_tmux"
+
+# These should be ok
+export XAUTHORITY="$home/.Xauthority"
+export DISPLAY=':0'
+export HOME="$home"
+term_conf="$home/.config/alacritty/alacritty.yml"
+tmux_conf="$home/.tmux.conf"
+
+# tmux needs -u flag for fonts
+while true
+do
+	exec chpst -U tidal $TERMINAL -e tmux -u -f $tmux_conf new-session -As $win_name 2>&1
+	sleep 1
+done

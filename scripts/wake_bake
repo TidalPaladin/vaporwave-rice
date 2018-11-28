@@ -1,0 +1,13 @@
+#!/bin/sh
+
+server_p="1701"
+pc_p="1702"
+
+# Wake
+ssh -p $server_p tidal@tidalpaladin.com ./wol.sh
+echo "Sent WOL request, waiting..."
+sleep 5
+
+# Bake
+ssh -p $pc_p tidal@tidalpaladin.com
+
