@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# Automates transcoding of 264 to 265 using NVENC hardware
+#
+
+# Args
+input="$1"
+output="$2"
+
+# Constants
+qual=22
+preset='slow'
+profile='main10'
+lookahead=32
+rc='vbr_hq'
+
+ffmpeg -hwaccel cuvid \
+-c:v h264_cuvid -i "$input" \
+-c:v hevc_nvenc -preset:v $preset -profile:v $profile -rc:v $rc -rc-lookahead:v $lookahead \
+	-spatial_aq:v 1 -aq-strength:v 12 -cq:v $qual -b:v 0 \
+-f matroska "$output"
