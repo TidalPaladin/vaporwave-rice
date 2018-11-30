@@ -5,17 +5,23 @@
 
 # Args
 input="$1"
-output="$2"
+gpu="$2"
+output="$(echo $1 | sed -e 's/264/265/g')"
 
 # Constants
-qual=22
+qual=21
+bmin="2M"
+bmax="10M"
+b="8M"
 preset='slow'
 profile='main10'
 lookahead=32
 rc='vbr_hq'
+crop='1920:1080:0:140'
 
-ffmpeg -hwaccel cuvid \
--c:v h264_cuvid -i "$input" \
+ffmpeg -hwaccel cuvid -gpu:v $gpu \
+-c:v h264_cuvid -i "$input" -map_chapters -1 -map_metadata -1 \
 -c:v hevc_nvenc -preset:v $preset -profile:v $profile -rc:v $rc -rc-lookahead:v $lookahead \
-	-spatial_aq:v 1 -aq-strength:v 12 -cq:v $qual -b:v 0 \
+	-level:v 4.1 -cq:v $qual -b:v $b -minrate $bmin -maxrate $bmax -bufsize 25M -spatial_aq 1 -tier high -gpu:v $gpu \
+-acodec copy -bufsize 4M -max_muxing_queue_size 9999 \
 -f matroska "$output"

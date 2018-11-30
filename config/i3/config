@@ -362,6 +362,7 @@ client.background       $bg
 ## Gaps
 gaps inner 25
 gaps outer 20
+#gaps top 20
 
 # Smart gaps (gaps used if only more than one container on the workspace)
 #smart_gaps on

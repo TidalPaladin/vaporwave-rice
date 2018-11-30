@@ -1,6 +1,6 @@
 windows:
 - geometry: !!binary |
-    AdnQywACAAAAAAE1AAABBwAACL4AAAVIAAABOQAAAQsAAAi4AAAFQgAAAAAAAAAACgA=
+    AdnQywACAAAAAAAxAAAAMQAAA1oAAAKSAAAANQAAADUAAANUAAACjAAAAAAAAAAADwA=
   tabs:
   - history:
     - pinned: false

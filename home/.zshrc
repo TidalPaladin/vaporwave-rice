@@ -46,29 +46,6 @@ function tssh() {
 	ssh $1 -t tmux attach-session
 }
 
-function encode-265() {
-	input="$1"
-	output="$2"
-	qual=15
-	preset="slow"
-	br="400K"
-
-	ffmpeg -hwaccel cuvid -i "$input" \
-	-c:v hevc_nvenc -surfaces 32 -spatial_aq 1 -cq "$qual" -preset "$preset" -profile:v 3 -rc vbr \
-	-c:a aac -b:a 64k \
-	"$output"
-}
-
-function 264-to-265() {
-	input="$1"
-	output="$2"
-	w=1280
-	h=720
-	br="8M"
-	ffmpeg -hwaccel cuvid -i "$input" \
-	-c:v hevc_nvenc -preset slow -cq 18 -rc vbr_hq -rc-lookahead 10 -spatial_aq 1 -temporal_aq 1 -b:v "$br" \
-	"$output"
-}
 
 #
 #
