@@ -22,24 +22,7 @@ export PATH="$PATH:/usr/local/cuda-10.0/bin/"
 export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ZSH=$HOME/.oh-my-zsh
 
-#
-#   ALIAS
-#
-#
-alias utd-vpn='sudo openconnect vpn.utdallas.edu'
-alias pia="bash $HOME/.pia.sh"
-alias now="date +%Y-%m-%d.%H:%M:%S"
-alias SS="sudo systemctl"
-alias gac="git add . && git commit -m"
-alias gpom="git push origin master"
-alias rewal="wal -g -i \"$HOME/Pictures/Wallpapers/vaporwave.jpg\" --saturate 0.75"
-alias ls='ls -hN --color=auto --group-directories-first'
-alias ccat="highlight --out-format=ansi"
-alias raidstart="mdadm --assemble --scan && mount -a"
-alias mars-mips="java -jar $HOME/.scripts/Mars4_5.jar"
-
-# Neovim instead of vim
-alias vim="nvim"
+source ~/.alias
 
 # Alias function to attach tmux to remote session
 function tssh() {
