@@ -5,14 +5,14 @@
 alias vim="nvim"
 
 # Dirs
-alias db='cd ~/Documents/CS6360'
-alias ml='cd ~/Documents/CS6375'
-alias arch='cd ~/Documents/CS3340'
+alias db='~/Documents/CS6360'
+alias ml='~/Documents/CS6375'
+alias arch='~/Documents/CS3340'
 
 alias -g G='| grep'
 alias -g L='| less'
 alias -g M='| more'
-alias aliases='vim ~/.aliase'
+alias aliases='vim ~/.alias'
 alias zshrc='vim ~/.zshrc'
 alias amend="git commit --amend"
 alias c='cd'
@@ -59,6 +59,7 @@ alias mastre='master'
 alias squash='git rebase -i master'
 
 alias sbox='ssh tidal@hades.feralhosting.com'
+alias lbox='cd /mnt/Storage/Downloads/ && lftp -u tidal, sftp://hades.feralhosting.com/~/private/rtorrent/data'
 alias serv='ssh tidal@tidalpaladin.com'
 alias reattach='tmux attach'
 alias inst='sudo pacman -S'

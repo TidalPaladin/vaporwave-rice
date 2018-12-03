@@ -1,6 +1,7 @@
 windows:
-- geometry: !!binary |
-    AdnQywACAAAAAAAxAAAAMQAAA1oAAAKSAAAANQAAADUAAANUAAACjAAAAAAAAAAADwA=
+- active: true
+  geometry: !!binary |
+    AdnQywACAAAAAAO/AAACGwAAC0AAAAZUAAADxAAAAiAAAAs7AAAGTwAAAAAAAAAADwA=
   tabs:
   - history:
     - pinned: false
@@ -231,11 +232,28 @@ windows:
       pinned: false
       title: mips instructions at DuckDuckGo
       url: https://duckduckgo.com/?q=mips+instructions&ia=web
+    - pinned: false
+      title: mips instructions at DuckDuckGo
+      url: https://duckduckgo.com/?q=mips+instructions&iax=images&ia=images&iai=http%3A%2F%2Fwww.cs.cornell.edu%2Fpeople%2Fegs%2Fcomp303%2Fproject4%2Fimages%2Ftal1.png
+    - pinned: false
+      title: wolfram alpha at DuckDuckGo
+      url: https://duckduckgo.com/?q=wolfram+alpha&ia=web
+    - original-url: https://www.wolframalpha.com/input/?i=100+%3D+1+%2F+(+(1-x)+%2B+(x%2F132))
+      pinned: false
+      title: 'Wolfram|Alpha: Computational Intelligence'
+      url: https://www.wolframalpha.com/
+    - original-url: https://www.wolframalpha.com/
+      pinned: false
+      title: 100 = 1 / ( (1-x) + (x/132)) - Wolfram|Alpha
+      url: https://www.wolframalpha.com/input/?i=100+%3D+1+%2F+(+(1-x)+%2B+(x%2F132))
+    - pinned: false
+      title: 1/((1 - x) + x/132) - Wolfram|Alpha
+      url: https://www.wolframalpha.com/input/?i=1%2F((1+-+x)+%2B+x%2F132)&lk=1&assumption=%22ClashPrefs%22+-%3E+%7B%22Math%22%7D
     - active: true
       pinned: false
       scroll-pos:
         x: 0
         y: 0
-      title: mips instructions at DuckDuckGo
-      url: https://duckduckgo.com/?q=mips+instructions&iax=images&ia=images&iai=http%3A%2F%2Fwww.cs.cornell.edu%2Fpeople%2Fegs%2Fcomp303%2Fproject4%2Fimages%2Ftal1.png
+      title: 1/((1 - x) + x/132) - Wolfram|Alpha
+      url: https://www.wolframalpha.com/input/?i=90%3D1%2F((1+-+x)+%2B+x%2F100)
       zoom: 1.0

@@ -29,6 +29,10 @@ function tssh() {
 	ssh $1 -t tmux attach-session
 }
 
+function mkpdf() {
+	lowriter --headless --convert-to pdf "$1" || exit 1
+}
+
 
 #
 #
