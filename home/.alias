@@ -30,7 +30,6 @@ alias rewal="wal -g -i \"$HOME/Pictures/Wallpapers/vaporwave.jpg\" --saturate 0.
 alias ls='ls -hN --color=auto --group-directories-first'
 alias ccat="highlight --out-format=ansi"
 alias raidstart="mdadm --assemble --scan && mount -a"
-alias mars-mips="java -jar $HOME/.scripts/Mars4_5.jar"
 
 
 # Git aliases

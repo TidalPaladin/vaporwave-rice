@@ -18,6 +18,7 @@ export TERM="xterm-256color"
 export TERMINAL="/usr/bin/alacritty"
 export PAGER="less"
 export EDITOR='/usr/bin/nvim'
+export READER='/usr/bin/zathura'
 export PATH="$PATH:/usr/local/cuda-10.0/bin/"
 export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ZSH=$HOME/.oh-my-zsh

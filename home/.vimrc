@@ -28,8 +28,11 @@ execute pathogen#helptags()
 	map <C-k> <C-w>k
 	map <C-l> <C-w>l
 
-" Open file as suckless sent presentation
-	map <leader>s :!sent<space><C-r>% 2>/dev/null &<CR><CR>
+" Shortcut for save file
+	map <leader>s :w<CR>
+
+" Shortcut for write quit
+	map <leader>q :wq<CR>
 
 " View an image for a suckless sent presentation:
 	map <leader>v $F@ly$:!feh --scale-down --auto-zoom --image-bg black <c-r>" &<CR><CR>
@@ -92,6 +95,12 @@ execute pathogen#helptags()
 
 " Runs a script that cleans out tex build files whenever I close out of a .tex file.
 	autocmd VimLeave *.tex !texclear %
+
+" Automatically deletes all trailing whitespace on save.
+	autocmd BufWritePre * %s/\s\+$//e
+
+" Run xrdb whenever Xdefaults or Xresources are updated.
+	autocmd BufWritePost ~/.Xresources,~/.Xdefaults !xrdb %
 
 " Disables automatic commenting on newline:
 "	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
